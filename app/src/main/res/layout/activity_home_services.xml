@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home_services"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:background="#009688"
+    tools:context="com.exmple.taimoor.thewayout.HomeServices">
+<TextView
+    android:textStyle="italic"
+    android:fontFamily="serif"
+    android:background="#AA00FF"
+    android:layout_marginBottom="500dp"
+    android:text="HOME SERVICES"
+    android:textAlignment="center"
+    android:textSize="45dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/text1"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentStart="true" />
+    <ImageView
+        android:src="@drawable/dt1"
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <LinearLayout
+        android:useDefaultMargins="true"
+        android:id="@+id/parent_layout"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_height="260dp">
+
+    <LinearLayout
+
+        android:id="@+id/layout_row1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:textStyle="italic"
+            android:fontFamily="serif"
+            android:background="#F44336"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/elect"
+            android:text="Electrition" />
+
+        <Button
+            android:textStyle="italic"
+            android:fontFamily="serif"
+            android:background="#B2FF59"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:text="Plumber" />
+
+        <Button
+            android:textStyle="italic"
+            android:fontFamily="serif"
+            android:background="#304FFE"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:text="Laundry" />
+</LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_row2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <Button
+                android:textStyle="italic"
+                android:fontFamily="serif"
+                android:background="#E91E63"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="AC Technicians" />
+
+            <Button
+                android:textStyle="italic"
+                android:fontFamily="serif"
+                android:background="#795548"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="Painter" />
+
+            <Button
+                android:textStyle="italic"
+                android:fontFamily="serif"
+                android:background="#009688"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="Carpenter" />
+</LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_row3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <Button
+                android:textStyle="italic"
+                android:fontFamily="serif"
+                android:background="#757575"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="Cleaner" />
+
+            <Button
+                android:textStyle="italic"
+                android:fontFamily="serif"
+                android:background="#FFC107"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="Mason" />
+
+            <Button
+                android:textStyle="italic"
+                android:fontFamily="serif"
+                android:background="#1B5E20"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="Glass And Windows" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_row4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:textStyle="italic"
+            android:fontFamily="serif"
+            android:background="#CDDC39"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:text="Construction" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
