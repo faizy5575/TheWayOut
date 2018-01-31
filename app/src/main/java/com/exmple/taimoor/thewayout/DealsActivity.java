@@ -14,7 +14,7 @@ public class DealsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_deals);
-        mAddNewDeal = (Button) findViewById(R.id.addNewDealbutton);
+        mAddNewDeal = (Button) findViewById(R.id.addNewDeal);
         mAddNewDeal.setOnClickListener(onAddDeal);
     }
 

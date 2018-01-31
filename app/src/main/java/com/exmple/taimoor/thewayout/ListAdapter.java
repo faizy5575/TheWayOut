@@ -67,6 +67,8 @@ public class ListAdapter extends BaseAdapter
 
         viewItem.SubFullFormTextView.setText(subject_list.get(position).Subject_Full_Form);
 
+        viewItem.SubFullFormPhoneNumber.setText(subject_list.get(position).Subject_Full_Form_PhoneNumber);
+
 
         return convertView;
     }
