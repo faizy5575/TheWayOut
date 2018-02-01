@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="#FFC107"
-    tools:context="com.exmple.taimoor.thewayout.DealsActivity">
+    tools:context="com.exmple.taimoor.thewayout.dealsactivities.DealsActivity">
 
     <ListView
         android:layout_width="match_parent"
@@ -37,7 +37,7 @@
 
         <Button
             android:height="60dp"
-            android:text="Add New Deal"
+            android:text="Add New"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"

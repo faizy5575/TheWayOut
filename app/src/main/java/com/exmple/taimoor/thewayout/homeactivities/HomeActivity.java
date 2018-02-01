@@ -1,4 +1,4 @@
-package com.exmple.taimoor.thewayout;
+package com.exmple.taimoor.thewayout.homeactivities;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -8,6 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.exmple.taimoor.thewayout.ActivitiesActivity;
+import com.exmple.taimoor.thewayout.FacilitiesActivity;
+import com.exmple.taimoor.thewayout.R;
+import com.exmple.taimoor.thewayout.ReservationActivity;
+import com.exmple.taimoor.thewayout.SportsActivity;
+import com.exmple.taimoor.thewayout.dealsactivities.DealsActivity;
 import com.exmple.taimoor.thewayout.directoryactivities.DirectoryActivity;
 import com.exmple.taimoor.thewayout.homeservicesactivities.HomeServices;
 import com.hitomi.cmlibrary.CircleMenu;

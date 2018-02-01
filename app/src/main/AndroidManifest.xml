@@ -12,15 +12,15 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".homeactivities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".SliderActivity">
+        <activity android:name=".homeactivities.HomeActivity" />
+        <activity android:name=".homeactivities.SliderActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,14 +29,14 @@
         </activity>
         <activity android:name=".SportsActivity" />
         <activity android:name=".homeservicesactivities.HomeServices" />
-        <activity android:name=".DealsActivity" />
+        <activity android:name=".dealsactivities.DealsActivity" />
         <activity android:name=".ActivitiesActivity" />
         <activity android:name=".ReservationActivity" />
         <activity android:name=".directoryactivities.DirectoryActivity" />
         <activity android:name=".FacilitiesActivity" />
-        <activity android:name=".Registration" />
+        <activity android:name=".homeactivities.Registration" />
         <activity android:name=".homeservicesactivities.electrition.Electrician" />
-        <activity android:name=".NewDeal"></activity>
+        <activity android:name=".dealsactivities.NewDeal"></activity>
     </application>
 
 </manifest>

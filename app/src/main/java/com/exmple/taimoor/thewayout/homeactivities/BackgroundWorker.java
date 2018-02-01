@@ -1,10 +1,12 @@
-package com.exmple.taimoor.thewayout;
+package com.exmple.taimoor.thewayout.homeactivities;
 
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.widget.Toast;
+
+import com.exmple.taimoor.thewayout.homeactivities.HomeActivity;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -134,13 +136,16 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
     protected void onPostExecute(String result) {
         alertDialog.setMessage(result);
         //alertDialog.show();
-        if(result.contentEquals("Login success") || result.contentEquals("Insert Successful")) {
+        if(result.contentEquals("Login success")) {
 
             context.startActivity(new Intent(context, HomeActivity.class));
 
         }
-        else
+        else if (result.contentEquals("Login success")){
 
+            context.startActivity(new Intent(context, HomeActivity.class));
+        }
+        else
         {
             Toast.makeText(context, "Wrong Username or Password!", Toast.LENGTH_SHORT).show();
        }

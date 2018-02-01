@@ -4,7 +4,7 @@
     android:id="@+id/activity_registration"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.exmple.taimoor.thewayout.Registration">
+    tools:context="com.exmple.taimoor.thewayout.homeactivities.Registration">
 
         <TextView
             android:text="NAME"

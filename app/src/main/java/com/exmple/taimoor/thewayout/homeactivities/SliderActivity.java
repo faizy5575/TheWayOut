@@ -1,4 +1,4 @@
-package com.exmple.taimoor.thewayout;
+package com.exmple.taimoor.thewayout.homeactivities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,6 +17,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.exmple.taimoor.thewayout.R;
 
 public class SliderActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.exmple.taimoor.thewayout;
+package com.exmple.taimoor.thewayout.homeactivities;
 
 import android.content.Context;
 import android.content.SharedPreferences;
