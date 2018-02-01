@@ -8,6 +8,43 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.exmple.taimoor.thewayout.DirectoryActivity">
+    tools:context="com.exmple.taimoor.thewayout.directoryactivities.DirectoryActivity">
+
+    <TextView
+        android:id="@+id/SubjectFullFormPageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Details Of Active Users"
+        android:textColor="#429ed7"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+    <ListView
+        android:id="@+id/directoryListView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/borderView">
+    </ListView>
+
+    <ProgressBar
+        android:id="@+id/ProgressBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        />
+
+    <ImageView
+        android:id="@+id/borderView"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#429ed7"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/SubjectFullFormPageTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

@@ -28,14 +28,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".SportsActivity" />
-        <activity android:name=".HomeServices" />
+        <activity android:name=".homeservicesactivities.HomeServices" />
         <activity android:name=".DealsActivity" />
         <activity android:name=".ActivitiesActivity" />
         <activity android:name=".ReservationActivity" />
-        <activity android:name=".DirectoryActivity" />
+        <activity android:name=".directoryactivities.DirectoryActivity" />
         <activity android:name=".FacilitiesActivity" />
         <activity android:name=".Registration" />
-        <activity android:name=".Electrician" />
+        <activity android:name=".homeservicesactivities.electrition.Electrician" />
         <activity android:name=".NewDeal"></activity>
     </application>
 

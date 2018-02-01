@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:weightSum="10"
     android:background="#009688"
-    tools:context="com.exmple.taimoor.thewayout.HomeServices">
+    tools:context="com.exmple.taimoor.thewayout.homeservicesactivities.HomeServices">
 <TextView
     android:textStyle="italic"
     android:fontFamily="serif"

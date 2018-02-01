@@ -1,11 +1,6 @@
-package com.exmple.taimoor.thewayout;
+package com.exmple.taimoor.thewayout.directoryactivities;
 
-import java.util.ArrayList;
-import java.util.List;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import android.app.Activity;
+        import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -13,15 +8,23 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import java.net.URL;
 import android.widget.Toast;
 
+import com.exmple.taimoor.thewayout.R;
 
-public class Electrician extends Activity {
+        import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-    ListView SubjectFullFormListView;
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class DirectoryActivity extends Activity {
+
+    ListView DirectoryListView;
     ProgressBar progressBar;
-    String HttpURL = "http://192.168.53.53:8080/theWayOut/electrician.php";
+    String HttpURL = "http://192.168.53.150:80/theWayOut/directory.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +32,11 @@ public class Electrician extends Activity {
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        setContentView(R.layout.activity_electrician);
+        setContentView(R.layout.activity_directory);
 
-        SubjectFullFormListView = (ListView) findViewById(R.id.electricianListView);
+        DirectoryListView = findViewById(R.id.directoryListView1);
 
-        progressBar = (ProgressBar) findViewById(R.id.electricianProgressBar1);
+        progressBar = findViewById(R.id.ProgressBar1);
 
         new ParseJSonDataClass(this).execute();
     }
@@ -41,7 +44,7 @@ public class Electrician extends Activity {
     private class ParseJSonDataClass extends AsyncTask<Void, Void, Void> {
         public Context context;
         String FinalJSonResult;
-        List<Subject> SubjectFullFormList;
+        List<Subject> DirectoryFullFormList;
 
         public ParseJSonDataClass(Context context) {
 
@@ -75,7 +78,7 @@ public class Electrician extends Activity {
                             JSONObject jsonObject;
                             Subject subject;
 
-                            SubjectFullFormList = new ArrayList<Subject>();
+                            DirectoryFullFormList = new ArrayList<Subject>();
 
                             for (int i = 0; i < jsonArray.length(); i++) {
 
@@ -83,13 +86,13 @@ public class Electrician extends Activity {
 
                                 jsonObject = jsonArray.getJSONObject(i);
 
-                                subject.Subject_Name = jsonObject.getString("txt_name");
+                                subject.userName = jsonObject.getString("txt_name");
 
-                                subject.Subject_Full_Form = jsonObject.getString("txt_address");
+                                subject.txt_address = jsonObject.getString("txt_address");
 
-                                subject.Subject_Full_Form_PhoneNumber = jsonObject.getString("int_phoneNumber");
+                                subject.int_phoneNumber = jsonObject.getString("int_phoneNumber");
 
-                                SubjectFullFormList.add(subject);
+                                DirectoryFullFormList.add(subject);
                             }
                         } catch (JSONException e) {
                             // TODO Auto-generated catch block
@@ -113,13 +116,13 @@ public class Electrician extends Activity {
         {
             progressBar.setVisibility(View.GONE);
 
-            SubjectFullFormListView.setVisibility(View.VISIBLE);
+            DirectoryListView.setVisibility(View.VISIBLE);
 
-            if (SubjectFullFormList != null) {
+            if (DirectoryFullFormList != null) {
 
-                ListAdapter adapter = new ListAdapter(SubjectFullFormList, context);
+                ListAdapter adapter = new ListAdapter(DirectoryFullFormList, context);
 
-                SubjectFullFormListView.setAdapter(adapter);
+                DirectoryListView.setAdapter(adapter);
             }
         }
     }

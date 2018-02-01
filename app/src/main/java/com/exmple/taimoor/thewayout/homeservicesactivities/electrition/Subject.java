@@ -1,4 +1,4 @@
-package com.exmple.taimoor.thewayout;
+package com.exmple.taimoor.thewayout.homeservicesactivities.electrition;
 
 /**
  * Created by faizan ahmed on 30/01/2018.

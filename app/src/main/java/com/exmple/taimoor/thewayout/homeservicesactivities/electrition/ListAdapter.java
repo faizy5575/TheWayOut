@@ -1,4 +1,4 @@
-package com.exmple.taimoor.thewayout;
+package com.exmple.taimoor.thewayout.homeservicesactivities.electrition;
 
 import java.util.List;
 import android.app.Activity;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.exmple.taimoor.thewayout.R;
 
 public class ListAdapter extends BaseAdapter
 {
