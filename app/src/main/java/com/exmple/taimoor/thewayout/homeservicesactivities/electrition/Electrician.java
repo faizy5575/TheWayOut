@@ -22,7 +22,7 @@ public class Electrician extends Activity {
 
     ListView SubjectFullFormListView;
     ProgressBar progressBar;
-    String HttpURL = "http://192.168.53.150:80/theWayOut/electrician.php";
+    String HttpURL = "http://192.168.53.99:80/theWayOut/electrician.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -51,7 +51,7 @@ public class ListAdapter extends BaseAdapter
 
             LayoutInflater layoutInfiater = (LayoutInflater)this.context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
 
-            convertView = layoutInfiater.inflate(R.layout.elect, null);
+            convertView = layoutInfiater.inflate(R.layout.list_view_for_electritionactivity, null);
 
             viewItem.SubNameTextView = convertView.findViewById(R.id.electricianText1);
 

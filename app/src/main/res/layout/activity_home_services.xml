@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="10"
-    android:background="#009688"
     tools:context="com.exmple.taimoor.thewayout.homeservicesactivities.HomeServices">
 <TextView
     android:textStyle="italic"
@@ -20,6 +19,7 @@
     android:id="@+id/text1"
     android:layout_alignParentTop="true"
     android:layout_alignParentStart="true" />
+
     <ImageView
         android:src="@drawable/dt1"
         android:layout_marginTop="80dp"
@@ -45,7 +45,6 @@
         <Button
             android:textStyle="italic"
             android:fontFamily="serif"
-            android:background="#F44336"
             style="?android:attr/buttonStyleSmall"
             android:layout_height="match_parent"
             android:layout_width="0dp"
@@ -57,7 +56,6 @@
         <Button
             android:textStyle="italic"
             android:fontFamily="serif"
-            android:background="#B2FF59"
             style="?android:attr/buttonStyleSmall"
             android:layout_height="match_parent"
             android:layout_width="0dp"
@@ -68,7 +66,6 @@
         <Button
             android:textStyle="italic"
             android:fontFamily="serif"
-            android:background="#304FFE"
             style="?android:attr/buttonStyleSmall"
             android:layout_height="match_parent"
             android:layout_width="0dp"
@@ -87,7 +84,6 @@
             <Button
                 android:textStyle="italic"
                 android:fontFamily="serif"
-                android:background="#E91E63"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
@@ -98,7 +94,6 @@
             <Button
                 android:textStyle="italic"
                 android:fontFamily="serif"
-                android:background="#795548"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
@@ -109,7 +104,6 @@
             <Button
                 android:textStyle="italic"
                 android:fontFamily="serif"
-                android:background="#009688"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
@@ -128,7 +122,6 @@
             <Button
                 android:textStyle="italic"
                 android:fontFamily="serif"
-                android:background="#757575"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
@@ -139,7 +132,6 @@
             <Button
                 android:textStyle="italic"
                 android:fontFamily="serif"
-                android:background="#FFC107"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
@@ -150,7 +142,6 @@
             <Button
                 android:textStyle="italic"
                 android:fontFamily="serif"
-                android:background="#1B5E20"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
@@ -169,7 +160,6 @@
         <Button
             android:textStyle="italic"
             android:fontFamily="serif"
-            android:background="#CDDC39"
             style="?android:attr/buttonStyleSmall"
             android:layout_height="match_parent"
             android:layout_width="0dp"

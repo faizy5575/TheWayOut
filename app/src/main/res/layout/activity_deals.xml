@@ -8,15 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#FFC107"
+    android:layout_weight="10"
     tools:context="com.exmple.taimoor.thewayout.dealsactivities.DealsActivity">
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/linearLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="84dp" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -33,15 +26,61 @@
             android:layout_height="60dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/button"/>
+            android:layout_toStartOf="@+id/button" />
 
         <Button
-            android:height="60dp"
             android:text="Add New"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:id="@+id/addNewDeal"/>
+            android:id="@+id/addNewDeal"
+            android:drawableLeft="@android:drawable/ic_menu_add" />
     </LinearLayout>
+
+    <RelativeLayout
+
+        android:layout_below="@+id/linearLayout"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content">
+
+        <TextView
+            android:id="@+id/SubjectFullFormPageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Details Of Active Deals"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+
+        <ListView
+            android:id="@+id/dealsListView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/borderView">
+        </ListView>
+
+        <ProgressBar
+            android:id="@+id/ProgressBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            />
+
+        <ImageView
+            android:id="@+id/borderView"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#000"
+            android:layout_marginTop="11dp"
+            android:layout_below="@+id/SubjectFullFormPageTitle"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
 </RelativeLayout>

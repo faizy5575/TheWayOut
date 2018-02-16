@@ -1,6 +1,6 @@
 package com.exmple.taimoor.thewayout.directoryactivities;
 
-        import android.app.Activity;
+import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -24,7 +24,7 @@ public class DirectoryActivity extends Activity {
 
     ListView DirectoryListView;
     ProgressBar progressBar;
-    String HttpURL = "http://192.168.53.150:80/theWayOut/directory.php";
+    String HttpURL = "http://192.168.53.99:80/theWayOut/directory.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
