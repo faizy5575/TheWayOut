@@ -3,9 +3,8 @@
     package="com.exmple.taimoor.thewayout">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -31,6 +30,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SportsActivity" />
+        <activity android:name=".homeactivities.LoginActivity"></activity>
         <activity android:name=".homeservicesactivities.HomeServices" />
         <activity android:name=".dealsactivities.DealsActivity" />
         <activity android:name=".ActivitiesActivity" />
@@ -39,7 +39,17 @@
         <activity android:name=".FacilitiesActivity" />
         <activity android:name=".homeservicesactivities.electrition.Electrician" />
         <activity android:name=".dealsactivities.NewDeal" />
-        <activity android:name=".homeactivities.LoginActivity"/>
+        <activity android:name=".homeservicesactivities.plumber.plumber"></activity>
+        <activity android:name=".homeservicesactivities.laundry.laundry"></activity>
+        <activity android:name=".homeservicesactivities.ac_technicians.ac_technicians"></activity>
+        <activity android:name=".homeservicesactivities.painter.painter"></activity>
+        <activity android:name=".homeservicesactivities.carpenter.carpenter"></activity>
+        <activity android:name=".homeservicesactivities.cleaner.cleaner"></activity>
+        <activity android:name=".homeservicesactivities.mason.mason"></activity>
+        <activity android:name=".homeservicesactivities.glass_and_windows.glass_and_windows"></activity>
+        <activity android:name=".homeservicesactivities.drivers.drivers"></activity>
+        <activity android:name=".homeservicesactivities.construction.construction"></activity>
+
     </application>
 
 </manifest>

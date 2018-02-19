@@ -29,7 +29,7 @@ public class DealsActivity extends AppCompatActivity {
 
     ListView DealsListView;
     ProgressBar progressBar;
-    String HttpURL = "http://192.168.53.99:80/theWayOut/deals.php";
+    String HttpURL = "http://192.168.53.53:8080/theWayOut/deals.php";
     Button mAddNewDeal;
 
     @Override

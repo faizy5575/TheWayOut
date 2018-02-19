@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="10"
+    android:background="#009688"
     tools:context="com.exmple.taimoor.thewayout.homeservicesactivities.HomeServices">
 <TextView
     android:textStyle="italic"
@@ -19,7 +20,6 @@
     android:id="@+id/text1"
     android:layout_alignParentTop="true"
     android:layout_alignParentStart="true" />
-
     <ImageView
         android:src="@drawable/dt1"
         android:layout_marginTop="80dp"
@@ -45,6 +45,7 @@
         <Button
             android:textStyle="italic"
             android:fontFamily="serif"
+            android:background="#F44336"
             style="?android:attr/buttonStyleSmall"
             android:layout_height="match_parent"
             android:layout_width="0dp"
@@ -56,21 +57,25 @@
         <Button
             android:textStyle="italic"
             android:fontFamily="serif"
+            android:background="#B2FF59"
             style="?android:attr/buttonStyleSmall"
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
+            android:id="@+id/plumb"
             android:text="Plumber" />
 
         <Button
             android:textStyle="italic"
             android:fontFamily="serif"
+            android:background="#304FFE"
             style="?android:attr/buttonStyleSmall"
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
+            android:id="@+id/laund"
             android:text="Laundry" />
 </LinearLayout>
 
@@ -84,31 +89,37 @@
             <Button
                 android:textStyle="italic"
                 android:fontFamily="serif"
+                android:background="#E91E63"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
+                android:id="@+id/actech"
                 android:text="AC Technicians" />
 
             <Button
                 android:textStyle="italic"
                 android:fontFamily="serif"
+                android:background="#795548"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
+                android:id="@+id/paint"
                 android:text="Painter" />
 
             <Button
                 android:textStyle="italic"
                 android:fontFamily="serif"
+                android:background="#009688"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
+                android:id="@+id/carPent"
                 android:text="Carpenter" />
 </LinearLayout>
 
@@ -122,31 +133,37 @@
             <Button
                 android:textStyle="italic"
                 android:fontFamily="serif"
+                android:background="#757575"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
+                android:id="@+id/clean"
                 android:text="Cleaner" />
 
             <Button
                 android:textStyle="italic"
                 android:fontFamily="serif"
+                android:background="#FFC107"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
+                android:id="@+id/mass"
                 android:text="Mason" />
 
             <Button
                 android:textStyle="italic"
                 android:fontFamily="serif"
+                android:background="#1B5E20"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
+                android:id="@+id/glass"
                 android:text="Glass And Windows" />
         </LinearLayout>
 
@@ -160,12 +177,25 @@
         <Button
             android:textStyle="italic"
             android:fontFamily="serif"
+            android:background="#CDDC39"
             style="?android:attr/buttonStyleSmall"
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
+            android:id="@+id/construct"
             android:text="Construction" />
+        <Button
+            android:textStyle="italic"
+            android:fontFamily="serif"
+            android:background="#FFC107"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/drive"
+            android:text="Drivers" />
 
         </LinearLayout>
     </LinearLayout>

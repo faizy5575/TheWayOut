@@ -1,6 +1,11 @@
-package com.exmple.taimoor.thewayout.directoryactivities;
+package com.exmple.taimoor.thewayout.homeservicesactivities.glass_and_windows;
 
-        import android.app.Activity;
+import java.util.ArrayList;
+import java.util.List;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -9,22 +14,18 @@ import android.view.Window;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+import android.os.Bundle;
+import android.widget.ImageView;
+
 
 import com.exmple.taimoor.thewayout.R;
 
-        import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
-import java.util.ArrayList;
-import java.util.List;
+public class glass_and_windows extends Activity {
 
-
-public class DirectoryActivity extends Activity {
-
-    ListView DirectoryListView;
+    ListView SubjectFullFormListView;
     ProgressBar progressBar;
-    String HttpURL = "http://192.168.53.53:8080/theWayOut/directory.php";
+    String HttpURL = "http://192.168.53.53:8080/theWayOut/glassandwindows.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +33,11 @@ public class DirectoryActivity extends Activity {
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        setContentView(R.layout.activity_directory);
+        setContentView(R.layout.activity_glass_and_windows);
 
-        DirectoryListView = findViewById(R.id.directoryListView1);
+        SubjectFullFormListView = (ListView) findViewById(R.id.glassListView);
 
-        progressBar = findViewById(R.id.ProgressBar1);
+        progressBar = (ProgressBar) findViewById(R.id.glassProgressBar1);
 
         new ParseJSonDataClass(this).execute();
     }
@@ -44,7 +45,7 @@ public class DirectoryActivity extends Activity {
     private class ParseJSonDataClass extends AsyncTask<Void, Void, Void> {
         public Context context;
         String FinalJSonResult;
-        List<Subject> DirectoryFullFormList;
+        List<Subject> SubjectFullFormList;
 
         public ParseJSonDataClass(Context context) {
 
@@ -78,7 +79,7 @@ public class DirectoryActivity extends Activity {
                             JSONObject jsonObject;
                             Subject subject;
 
-                            DirectoryFullFormList = new ArrayList<Subject>();
+                            SubjectFullFormList = new ArrayList<Subject>();
 
                             for (int i = 0; i < jsonArray.length(); i++) {
 
@@ -86,13 +87,13 @@ public class DirectoryActivity extends Activity {
 
                                 jsonObject = jsonArray.getJSONObject(i);
 
-                                subject.userName = jsonObject.getString("txt_name");
+                                subject.Subject_Name = jsonObject.getString("txt_name");
 
-                                subject.txt_address = jsonObject.getString("txt_address");
+                                subject.Subject_Full_Form = jsonObject.getString("txt_address");
 
-                                subject.int_phoneNumber = jsonObject.getString("int_phoneNumber");
+                                subject.Subject_Full_Form_PhoneNumber = jsonObject.getString("int_phoneNumber");
 
-                                DirectoryFullFormList.add(subject);
+                                SubjectFullFormList.add(subject);
                             }
                         } catch (JSONException e) {
                             // TODO Auto-generated catch block
@@ -116,15 +117,18 @@ public class DirectoryActivity extends Activity {
         {
             progressBar.setVisibility(View.GONE);
 
-            DirectoryListView.setVisibility(View.VISIBLE);
+            SubjectFullFormListView.setVisibility(View.VISIBLE);
 
-            if (DirectoryFullFormList != null) {
+            if (SubjectFullFormList != null) {
 
-                ListAdapter adapter = new ListAdapter(DirectoryFullFormList, context);
+                ListAdapter adapter = new ListAdapter(SubjectFullFormList, context);
 
-                DirectoryListView.setAdapter(adapter);
+                SubjectFullFormListView.setAdapter(adapter);
             }
         }
     }
+
+
+
 
 }

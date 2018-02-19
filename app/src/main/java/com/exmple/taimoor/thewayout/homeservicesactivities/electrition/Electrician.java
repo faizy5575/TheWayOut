@@ -14,6 +14,9 @@ import android.view.Window;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+import android.os.Bundle;
+import android.widget.ImageView;
+
 
 import com.exmple.taimoor.thewayout.R;
 
@@ -22,7 +25,7 @@ public class Electrician extends Activity {
 
     ListView SubjectFullFormListView;
     ProgressBar progressBar;
-    String HttpURL = "http://192.168.53.99:80/theWayOut/electrician.php";
+    String HttpURL = "http://192.168.53.53:8080/theWayOut/electrician.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,5 +127,8 @@ public class Electrician extends Activity {
             }
         }
     }
+
+
+
 
 }

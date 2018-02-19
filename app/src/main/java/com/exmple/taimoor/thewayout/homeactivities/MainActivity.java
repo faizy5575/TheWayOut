@@ -4,6 +4,8 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -56,7 +58,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         buttonRegister = (Button)findViewById(R.id.buttonRegister);
+        buttonRegister.setEnabled(false);
         textViewLogin = (TextView)findViewById(R.id.textViewLogin);
+
+
+        editTextUsername.addTextChangedListener(watcher);
+        editTextPassword.addTextChangedListener(watcher);
+        editTextAddress.addTextChangedListener(watcher);
+        editTextCNIC.addTextChangedListener(watcher);
+        editTextPhone.addTextChangedListener(watcher);
+
 
         progressDialog = new ProgressDialog(this);
 
@@ -142,4 +153,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
     }
 
+    private final TextWatcher watcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after)
+        { }
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count)
+        {}
+        @Override
+        public void afterTextChanged(Editable s) {
+            if (editTextUsername.getText().toString().trim().length() == 0 || editTextPassword.getText().toString().trim().length() == 0 ||
+                    editTextAddress.getText().toString().trim().length() == 0 || editTextCNIC.getText().toString().trim().length() == 0 ||
+                    editTextPhone.getText().toString().trim().length() == 0) {
+                buttonRegister.setEnabled(false);
+            } else {
+                buttonRegister.setEnabled(true);
+            }
+        }
+
+    };
 }
