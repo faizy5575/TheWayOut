@@ -51,4 +51,24 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="65dp" />
 
+    <TextView
+        android:text="Doesn't have an account ? Signup here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="33dp"
+        android:id="@+id/textViewRegister"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Login"
+        android:textSize="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78dp"
+        android:id="@+id/textView8" />
+
+
 </RelativeLayout>

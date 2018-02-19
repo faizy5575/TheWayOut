@@ -28,11 +28,12 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText editTextUsername, editTextPassword, editTextAddress, editTextCNIC, editTextPhone, editTextStatus;
+    private EditText editTextUsername, editTextPassword, editTextAddress, editTextCNIC, editTextPhone;
     private CheckBox checkBoxStatus;
+    private TextView textViewLogin;
     private Button buttonRegister;
     private ProgressDialog progressDialog;
-    private TextView textViewLogin;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,12 +51,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editTextAddress = (EditText) findViewById(R.id.editTextAddress);
         editTextCNIC = (EditText) findViewById(R.id.editTextCNIC);
         editTextPhone = (EditText) findViewById(R.id.editTextPhone);
-        textViewLogin = (TextView)findViewById(R.id.textViewLogin);
 
         checkBoxStatus = (CheckBox)findViewById(R.id.checkBoxStatus);
 
 
         buttonRegister = (Button)findViewById(R.id.buttonRegister);
+        textViewLogin = (TextView)findViewById(R.id.textViewLogin);
 
         progressDialog = new ProgressDialog(this);
 
@@ -96,6 +97,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             JSONObject jsonObject = new JSONObject(response);
 
                             Toast.makeText(getApplicationContext(), jsonObject.getString("message"), Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                            finish();
+                            startActivity(intent);
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -134,7 +138,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if (view == buttonRegister)
             registerUser();
-        if(view == textViewLogin)
-            startActivity(new Intent(this, LoginActivity.class));
+        if (view == textViewLogin)
+            startActivity(new Intent(MainActivity.this, LoginActivity.class));
     }
+
 }
