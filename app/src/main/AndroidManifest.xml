@@ -29,7 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SportsActivity" />
+        <activity android:name=".sportsactivities.SportsActivity" />
         <activity android:name=".homeactivities.LoginActivity"></activity>
         <activity android:name=".homeservicesactivities.HomeServices" />
         <activity android:name=".dealsactivities.DealsActivity" />

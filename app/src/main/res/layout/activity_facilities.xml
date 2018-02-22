@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="10"
-    tools:context="com.exmple.taimoor.thewayout.SportsActivity">
+    tools:context="com.exmple.taimoor.thewayout.FacilitiesActivity">
 
 
     <TextView
@@ -23,13 +23,14 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
     <ImageView
-        android:src="@drawable/sportsactvitybackground"
+        android:src="@drawable/facilities1"
         android:layout_marginTop="80dp"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:id="@+id/imageView" />
 
     <LinearLayout
+        android:background="#008000"
         android:layout_marginTop="10dp"
         android:useDefaultMargins="true"
         android:id="@+id/parent_layout"
@@ -47,47 +48,79 @@
 
             android:orientation="horizontal" >
 
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
+            <!--<Button-->
+                <!--style="?android:attr/buttonStyleSmall"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:text="Community Chamber" />-->
+            <ImageButton
+                android:background="#0000"
                 android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:text="Community Chamber" />
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/chamber" />
 
 
         </LinearLayout>
 
         <LinearLayout
+            android:background="#0000"
             android:id="@+id/layout_row2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal" >
 
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
+            <ImageButton
+                android:background="#0000"
                 android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:text="Food Court" />
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/guestchamber" />
 
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:text="Restaurants" />
+            <!--<Button-->
+                <!--android:background="#0000"-->
+                <!--android:drawableLeft="@drawable/foodcourt2"-->
+                <!--style="?android:attr/buttonStyleSmall"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:id="@+id/button2" />-->
 
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
+            <!--<Button-->
+                <!--android:background="#0000"-->
+                <!--style="?android:attr/buttonStyleSmall"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:text="Restaurants" />-->
+            <ImageButton
+                android:background="#0000"
                 android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:text="Cinema" />
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/restaurants" />
+
+            <!--<Button-->
+                <!--android:background="#0000"-->
+                <!--android:textSize="10dp"-->
+                <!--android:drawableTop="@drawable/cin"-->
+                <!--style="?android:attr/buttonStyleSmall"-->
+                <!--android:layout_height="82dp"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="0.88"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:text="Cinema" />-->
+            <ImageButton
+                android:background="#0000"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/foodcourt2" />
 
 
         </LinearLayout>
@@ -99,13 +132,19 @@
             android:layout_weight="1"
             android:orientation="horizontal" >
 
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
+            <!--<Button-->
+                <!--style="?android:attr/buttonStyleSmall"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:text="Guest Chambers" />-->
+            <ImageButton
+                android:background="#0000"
                 android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:text="Guest Chambers" />
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/cinema2" />
 
 
         </LinearLayout>

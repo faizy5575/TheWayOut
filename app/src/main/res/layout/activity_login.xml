@@ -25,7 +25,8 @@
         <EditText
             android:id="@+id/editTextUsername"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:focusedByDefault="true" />
 
 
         <TextView
@@ -50,5 +51,27 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="65dp" />
+
+    <TextView
+        android:textColor="#0000FF"
+        android:textSize="20sp"
+        android:text="Don't have an account?\nSignUp here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonLogin"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="47dp"
+        android:id="@+id/textViewRegister" />
+
+    <TextView
+        android:textSize="40sp"
+        android:text="LOGIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="61dp"
+        android:id="@+id/textView7"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
 
 </RelativeLayout>

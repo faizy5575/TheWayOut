@@ -151,6 +151,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             registerUser();
         if (view == textViewLogin)
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
+        finish();
     }
 
     private final TextWatcher watcher = new TextWatcher() {
