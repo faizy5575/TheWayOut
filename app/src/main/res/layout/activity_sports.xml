@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="10"
-    tools:context="com.exmple.taimoor.thewayout.sportsactivities.SportsActivity">
+    tools:context="com.exmple.taimoor.thewayout.SportsActivity">
 
 
     <TextView
@@ -55,7 +55,6 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
-                android:id="@+id/swim"
                 android:text="Swimming" />
 
             <Button

@@ -7,26 +7,16 @@ import android.view.View;
 import android.widget.Button;
 
 import com.exmple.taimoor.thewayout.R;
-import com.exmple.taimoor.thewayout.reservationactivities.ReservationActivity;
-import com.exmple.taimoor.thewayout.sportsactivities.swimming.swimmingactivity;
 
 public class SportsActivity extends AppCompatActivity {
-    Button mswim;
+
+    Button buttonSwimming;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sports);
-        mswim = (Button)findViewById(R.id.swim);
-        mswim.setOnClickListener(swim);
 
+        buttonSwimming = (Button)findViewById(R.id.buttonSwimming);
     }
-    public View.OnClickListener swim = new View.OnClickListener()
-    {
-        public void onClick (View v)
-        {
-            Intent intent = new Intent(SportsActivity.this, swimmingactivity.class);
-            startActivity(intent);
-        }
-    };
 }
