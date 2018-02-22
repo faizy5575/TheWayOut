@@ -1,7 +1,9 @@
-package com.exmple.taimoor.thewayout;
+package com.exmple.taimoor.thewayout.facilitiesactivities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.exmple.taimoor.thewayout.R;
 
 public class FacilitiesActivity extends AppCompatActivity {
 

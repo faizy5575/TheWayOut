@@ -25,7 +25,7 @@ public class glass_and_windows extends Activity {
 
     ListView SubjectFullFormListView;
     ProgressBar progressBar;
-    String HttpURL = "http://192.168.53.53:8080/theWayOut/glassandwindows.php";
+    String HttpURL = "http://192.168.51.139:8080/theWayOut/glassandwindows.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

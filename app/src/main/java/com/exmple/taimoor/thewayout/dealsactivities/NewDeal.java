@@ -51,7 +51,7 @@ public class NewDeal extends AppCompatActivity {
 
     String ImagePath = "image_path";
 
-    String ServerUploadPath ="http://192.168.53.99:80/theWayOut/upload.php";
+    String ServerUploadPath ="http://192.168.51.139:8080/theWayOut/upload.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

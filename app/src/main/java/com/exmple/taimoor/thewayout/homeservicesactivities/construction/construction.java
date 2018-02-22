@@ -25,7 +25,7 @@ public class construction extends Activity {
 
     ListView SubjectFullFormListView;
     ProgressBar progressBar;
-    String HttpURL = "http://192.168.53.53:8080/theWayOut/construction.php";
+    String HttpURL = "http://192.168.51.139:8080/theWayOut/construction.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

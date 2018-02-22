@@ -25,7 +25,7 @@ public class drivers extends Activity {
 
     ListView SubjectFullFormListView;
     ProgressBar progressBar;
-    String HttpURL = "http://192.168.53.53:8080/theWayOut/drivers.php";
+    String HttpURL = "http://192.168.51.139/theWayOut/drivers.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

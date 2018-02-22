@@ -24,7 +24,7 @@ public class DirectoryActivity extends Activity {
 
     ListView DirectoryListView;
     ProgressBar progressBar;
-    String HttpURL = "http://192.168.53.53:8080/theWayOut/directory.php";
+    String HttpURL = "http://192.168.51.139:8080/theWayOut/directory.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

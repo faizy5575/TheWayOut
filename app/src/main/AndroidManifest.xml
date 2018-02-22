@@ -29,14 +29,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SportsActivity" />
+        <activity android:name=".sportsactivities.SportsActivity" />
         <activity android:name=".homeactivities.LoginActivity"></activity>
         <activity android:name=".homeservicesactivities.HomeServices" />
         <activity android:name=".dealsactivities.DealsActivity" />
-        <activity android:name=".ActivitiesActivity" />
-        <activity android:name=".ReservationActivity" />
+        <activity android:name=".activitiesactivities.ActivitiesActivity" />
+        <activity android:name=".reservationactivities.ReservationActivity" />
         <activity android:name=".directoryactivities.DirectoryActivity" />
-        <activity android:name=".FacilitiesActivity" />
+        <activity android:name=".facilitiesactivities.FacilitiesActivity" />
         <activity android:name=".homeservicesactivities.electrition.Electrician" />
         <activity android:name=".dealsactivities.NewDeal" />
         <activity android:name=".homeservicesactivities.plumber.plumber"></activity>
@@ -49,6 +49,7 @@
         <activity android:name=".homeservicesactivities.glass_and_windows.glass_and_windows"></activity>
         <activity android:name=".homeservicesactivities.drivers.drivers"></activity>
         <activity android:name=".homeservicesactivities.construction.construction"></activity>
+        <activity android:name=".sportsactivities.swimming.swimmingactivity"></activity>
 
     </application>
 

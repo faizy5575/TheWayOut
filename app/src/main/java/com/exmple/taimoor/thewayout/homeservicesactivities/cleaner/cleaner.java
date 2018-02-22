@@ -25,7 +25,7 @@ public class cleaner extends Activity {
 
     ListView SubjectFullFormListView;
     ProgressBar progressBar;
-    String HttpURL = "http://192.168.53.53:8080/theWayOut/cleaner.php";
+    String HttpURL = "http://192.168.51.139:8080/theWayOut/cleaner.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
