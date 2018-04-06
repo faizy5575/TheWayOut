@@ -4,12 +4,39 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#91D8F7"
+    android:padding="3dp"
     tools:context="com.exmple.taimoor.thewayout.dealsactivities.NewDeal">
 
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#A8CF45"
+            android:elevation="4dp"
+            android:layout_alignParentTop="true">
+        </android.support.v7.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/borderView"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#000"
+            android:layout_marginTop="1dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <TextView
         android:textSize="25dp"
@@ -30,7 +57,7 @@
         android:layout_toEndOf="@+id/imageView"
         android:layout_above="@+id/editTextImageName"
         android:drawableTop="@android:drawable/ic_input_add"
-        android:layout_width="wrap_content" />
+        android:layout_width="match_parent" />
 
     <ImageView
         android:layout_width="100dp"
@@ -58,5 +85,7 @@
         android:layout_marginTop="31dp"
         android:layout_below="@+id/imageView"
         android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
 
 </RelativeLayout>

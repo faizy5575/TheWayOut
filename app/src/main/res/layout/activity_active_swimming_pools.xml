@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_active_swimming_pools"
+    android:padding="3dp"
+    android:background="#91D8F7"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.exmple.taimoor.thewayout.sportsactivities.Swimming.ActiveSwimmingPools">
+
+        <LinearLayout
+            android:id="@id/linearLayout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#A8CF45"
+            android:elevation="4dp"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:background="#91D8F7"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerviewswimming"
+            android:layout_width="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+</RelativeLayout>

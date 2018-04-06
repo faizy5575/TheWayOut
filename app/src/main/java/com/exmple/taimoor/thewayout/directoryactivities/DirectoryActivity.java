@@ -1,18 +1,20 @@
 package com.exmple.taimoor.thewayout.directoryactivities;
 
-        import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.exmple.taimoor.thewayout.R;
 
-        import org.json.JSONArray;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -20,11 +22,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class DirectoryActivity extends Activity {
+public class DirectoryActivity extends AppCompatActivity {
 
     ListView DirectoryListView;
     ProgressBar progressBar;
-    String HttpURL = "http://192.168.51.139:8080/theWayOut/directory.php";
+    String HttpURL = "http://192.168.53.118:80/theWayOut/directory.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +36,13 @@ public class DirectoryActivity extends Activity {
 
         setContentView(R.layout.activity_directory);
 
-        DirectoryListView = findViewById(R.id.directoryListView1);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        progressBar = findViewById(R.id.ProgressBar1);
+        DirectoryListView = (ListView) findViewById(R.id.directoryListView1);
+
+        progressBar = (ProgressBar) findViewById(R.id.ProgressBar1);
 
         new ParseJSonDataClass(this).execute();
     }
@@ -72,13 +78,14 @@ public class DirectoryActivity extends Activity {
                     if (FinalJSonResult != null) {
 
                         JSONArray jsonArray = null;
+
                         try {
 
                             jsonArray = new JSONArray(FinalJSonResult);
                             JSONObject jsonObject;
                             Subject subject;
 
-                            DirectoryFullFormList = new ArrayList<Subject>();
+                            DirectoryFullFormList = new ArrayList<>();
 
                             for (int i = 0; i < jsonArray.length(); i++) {
 

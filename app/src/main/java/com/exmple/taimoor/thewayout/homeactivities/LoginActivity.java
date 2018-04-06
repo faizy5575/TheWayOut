@@ -126,7 +126,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
         if(view == textViewRegister){
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
-            finish();
         }
     }
 }

@@ -1,41 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_home_services"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="10"
-    android:background="#009688"
+    android:background="#000000"
     tools:context="com.exmple.taimoor.thewayout.homeservicesactivities.HomeServices">
-<TextView
-    android:textStyle="italic"
-    android:fontFamily="serif"
-    android:background="#AA00FF"
-    android:layout_marginBottom="500dp"
-    android:text="HOME SERVICES"
-    android:textAlignment="center"
-    android:textSize="45dp"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/text1"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentStart="true" />
-    <ImageView
-        android:src="@drawable/dt1"
-        android:layout_marginTop="80dp"
+
+    <RelativeLayout
+        android:background="@drawable/finalhomeservices"
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#91D8F7"
+            android:elevation="4dp"/>
 
     <LinearLayout
+        android:layout_marginTop="80dp"
         android:useDefaultMargins="true"
         android:id="@+id/parent_layout"
         android:layout_width="match_parent"
         android:orientation="vertical"
+        android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
-        android:layout_height="260dp">
+        android:layout_alignParentStart="true">
 
     <LinearLayout
-
         android:id="@+id/layout_row1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -43,40 +39,37 @@
         android:orientation="horizontal" >
 
         <Button
+            android:background="@android:color/transparent"
             android:textStyle="italic"
             android:fontFamily="serif"
-            android:background="#F44336"
             style="?android:attr/buttonStyleSmall"
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
-            android:id="@+id/elect"
-            android:text="Electrition" />
+            android:id="@+id/elect" />
 
         <Button
+            android:background="@android:color/transparent"
             android:textStyle="italic"
             android:fontFamily="serif"
-            android:background="#B2FF59"
             style="?android:attr/buttonStyleSmall"
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
-            android:id="@+id/plumb"
-            android:text="Plumber" />
+            android:id="@+id/plumb"/>
 
         <Button
+            android:background="@android:color/transparent"
             android:textStyle="italic"
             android:fontFamily="serif"
-            android:background="#304FFE"
             style="?android:attr/buttonStyleSmall"
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
-            android:id="@+id/laund"
-            android:text="Laundry" />
+            android:id="@+id/laund" />
 </LinearLayout>
 
         <LinearLayout
@@ -87,40 +80,37 @@
             android:orientation="horizontal" >
 
             <Button
+                android:background="@android:color/transparent"
                 android:textStyle="italic"
                 android:fontFamily="serif"
-                android:background="#E91E63"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
-                android:id="@+id/actech"
-                android:text="AC Technicians" />
+                android:id="@+id/actech" />
 
             <Button
+                android:background="@android:color/transparent"
                 android:textStyle="italic"
                 android:fontFamily="serif"
-                android:background="#795548"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
-                android:id="@+id/paint"
-                android:text="Painter" />
+                android:id="@+id/paint" />
 
             <Button
+                android:background="@android:color/transparent"
                 android:textStyle="italic"
                 android:fontFamily="serif"
-                android:background="#009688"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
-                android:id="@+id/carPent"
-                android:text="Carpenter" />
+                android:id="@+id/carPent" />
 </LinearLayout>
 
         <LinearLayout
@@ -131,40 +121,37 @@
             android:orientation="horizontal" >
 
             <Button
+                android:background="@android:color/transparent"
                 android:textStyle="italic"
                 android:fontFamily="serif"
-                android:background="#757575"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
-                android:id="@+id/clean"
-                android:text="Cleaner" />
+                android:id="@+id/clean" />
 
             <Button
+                android:background="@android:color/transparent"
                 android:textStyle="italic"
                 android:fontFamily="serif"
-                android:background="#FFC107"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
-                android:id="@+id/mass"
-                android:text="Mason" />
+                android:id="@+id/mass" />
 
             <Button
+                android:background="@android:color/transparent"
                 android:textStyle="italic"
                 android:fontFamily="serif"
-                android:background="#1B5E20"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
-                android:id="@+id/glass"
-                android:text="Glass And Windows" />
+                android:id="@+id/glass" />
         </LinearLayout>
 
     <LinearLayout
@@ -175,31 +162,51 @@
         android:orientation="horizontal" >
 
         <Button
+            android:background="@android:color/transparent"
             android:textStyle="italic"
             android:fontFamily="serif"
-            android:background="#CDDC39"
             style="?android:attr/buttonStyleSmall"
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
-            android:id="@+id/construct"
-            android:text="Construction" />
+            android:id="@+id/construct" />
+
         <Button
+            android:background="@android:color/transparent"
             android:textStyle="italic"
             android:fontFamily="serif"
-            android:background="#FFC107"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"/>
+
+        <Button
+            android:background="@android:color/transparent"
+            android:textStyle="italic"
+            android:fontFamily="serif"
             style="?android:attr/buttonStyleSmall"
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
-            android:id="@+id/drive"
-            android:text="Drivers" />
+            android:id="@+id/drive" />
 
         </LinearLayout>
     </LinearLayout>
 
+    </RelativeLayout>
 
+    <android.support.design.widget.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/navigation_menu"
+        android:layout_gravity="start"
+        android:background="#A8CF45"
+        app:headerLayout="@layout/navigation_header"
+        android:id="@+id/nav_view">
 
-</RelativeLayout>
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

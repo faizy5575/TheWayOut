@@ -2,6 +2,7 @@ package com.exmple.taimoor.thewayout.dealsactivities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -51,12 +52,16 @@ public class NewDeal extends AppCompatActivity {
 
     String ImagePath = "image_path";
 
-    String ServerUploadPath ="http://192.168.51.139:8080/theWayOut/upload.php";
+    String ServerUploadPath ="http://192.168.53.118:80/theWayOut/upload.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_deal);
+
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         imageView = (ImageView)findViewById(R.id.imageView);
 

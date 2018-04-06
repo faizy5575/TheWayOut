@@ -8,9 +8,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
-/**
- * Created by Hamza Mehmood on 2/16/2018.
- */
+
 
 public class RequestHandler {
 

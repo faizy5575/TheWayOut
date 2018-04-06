@@ -3,13 +3,14 @@
     package="com.exmple.taimoor.thewayout">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="false"
-        android:icon="@drawable/logo"
+        android:icon="@drawable/finallogo"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:supportsRtl="true"
@@ -30,27 +31,138 @@
             </intent-filter>
         </activity>
         <activity android:name=".sportsactivities.SportsActivity" />
-        <activity android:name=".homeactivities.LoginActivity"></activity>
+        <activity android:name=".homeactivities.LoginActivity" />
         <activity android:name=".homeservicesactivities.HomeServices" />
-        <activity android:name=".dealsactivities.DealsActivity" />
+        <activity
+            android:name=".dealsactivities.DealsActivity"
+            android:label="Active Deals"
+            android:parentActivityName=".homeactivities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".homeactivities.HomeActivity" />
+        </activity>
         <activity android:name=".activitiesactivities.ActivitiesActivity" />
-        <activity android:name=".reservationactivities.ReservationActivity" />
-        <activity android:name=".directoryactivities.DirectoryActivity" />
+        <activity
+            android:name=".directoryactivities.DirectoryActivity"
+            android:label="Directory"
+            android:parentActivityName=".homeactivities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".homeactivities.HomeActivity" />
+        </activity>
         <activity android:name=".facilitiesactivities.FacilitiesActivity" />
-        <activity android:name=".homeservicesactivities.electrition.Electrician" />
-        <activity android:name=".dealsactivities.NewDeal" />
-        <activity android:name=".homeservicesactivities.plumber.plumber"></activity>
-        <activity android:name=".homeservicesactivities.laundry.laundry"></activity>
-        <activity android:name=".homeservicesactivities.ac_technicians.ac_technicians"></activity>
-        <activity android:name=".homeservicesactivities.painter.painter"></activity>
-        <activity android:name=".homeservicesactivities.carpenter.carpenter"></activity>
-        <activity android:name=".homeservicesactivities.cleaner.cleaner"></activity>
-        <activity android:name=".homeservicesactivities.mason.mason"></activity>
-        <activity android:name=".homeservicesactivities.glass_and_windows.glass_and_windows"></activity>
-        <activity android:name=".homeservicesactivities.drivers.drivers"></activity>
-        <activity android:name=".homeservicesactivities.construction.construction"></activity>
-        <activity android:name=".sportsactivities.swimming.swimmingactivity"></activity>
-
+        <activity
+            android:name=".homeservicesactivities.electrition.Electrician"
+            android:label="Electricians"
+            android:parentActivityName=".homeservicesactivities.HomeServices">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".homeservicesactivities.HomeServices" />
+        </activity>
+        <activity
+            android:name=".dealsactivities.NewDeal"
+            android:label="Add New Deals"
+            android:parentActivityName=".dealsactivities.DealsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".dealsactivities.DealsActivity" />
+        </activity>
+        <activity
+            android:name=".homeservicesactivities.plumber.plumber"
+            android:label="Plumber"
+            android:parentActivityName=".homeservicesactivities.HomeServices">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".homeservicesactivities.HomeServices" />
+        </activity>
+        <activity
+            android:name=".homeservicesactivities.laundry.laundry"
+            android:label="Laundry"
+            android:parentActivityName=".homeservicesactivities.HomeServices">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".homeservicesactivities.HomeServices" />
+        </activity>
+        <activity
+            android:name=".homeservicesactivities.ac_technicians.ac_technicians"
+            android:label="Ac Technicians"
+            android:parentActivityName=".homeservicesactivities.HomeServices">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".homeservicesactivities.HomeServices" />
+        </activity>
+        <activity
+            android:name=".homeservicesactivities.painter.painter"
+            android:label="Painters"
+            android:parentActivityName=".homeservicesactivities.HomeServices">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".homeservicesactivities.HomeServices" />
+        </activity>
+        <activity
+            android:name=".homeservicesactivities.carpenter.carpenter"
+            android:label="Carpenters"
+            android:parentActivityName=".homeservicesactivities.HomeServices">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".homeservicesactivities.HomeServices" />
+        </activity>
+        <activity
+            android:name=".homeservicesactivities.cleaner.cleaner"
+            android:label="Cleaners"
+            android:parentActivityName=".homeservicesactivities.HomeServices">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".homeservicesactivities.HomeServices" />
+        </activity>
+        <activity
+            android:name=".homeservicesactivities.mason.mason"
+            android:label="Mason"
+            android:parentActivityName=".homeservicesactivities.HomeServices">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".homeservicesactivities.HomeServices" />
+        </activity>
+        <activity
+            android:name=".homeservicesactivities.glass_and_windows.glass_and_windows"
+            android:label="Glass And Windows"
+            android:parentActivityName=".homeservicesactivities.HomeServices">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".homeservicesactivities.HomeServices" />
+        </activity>
+        <activity
+            android:name=".homeservicesactivities.drivers.drivers"
+            android:label="Drivers"
+            android:parentActivityName=".homeservicesactivities.HomeServices">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".homeservicesactivities.HomeServices" />
+        </activity>
+        <activity
+            android:name=".homeservicesactivities.construction.construction"
+            android:label="Builders"
+            android:parentActivityName=".homeservicesactivities.HomeServices">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".homeservicesactivities.HomeServices" />
+        </activity>
+        <activity
+            android:name=".sportsactivities.Swimming.SwimmingActivity"
+            android:label="Pick Date And Time"
+            android:parentActivityName=".sportsactivities.SportsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".sportsactivities.SportsActivity" />
+        </activity>
+        <activity
+            android:name=".sportsactivities.Swimming.ActiveSwimmingPools"
+            android:label="Active Swimming Pools"
+            android:parentActivityName=".sportsactivities.Swimming.SwimmingActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".sportsactivities.Swimming.SwimmingActivity" />
+        </activity>
     </application>
 
 </manifest>

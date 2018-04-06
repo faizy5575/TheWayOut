@@ -9,6 +9,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
 import android.widget.ListView;
@@ -21,11 +23,11 @@ import android.widget.ImageView;
 import com.exmple.taimoor.thewayout.R;
 
 
-public class plumber extends Activity {
+public class plumber extends AppCompatActivity {
 
     ListView SubjectFullFormListView;
     ProgressBar progressBar;
-    String HttpURL = "http://192.168.51.139:8080/theWayOut/electrician.php";
+    String HttpURL = "http://192.168.53.118:80/theWayOut/plumber.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,9 @@ public class plumber extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         setContentView(R.layout.activity_plumber);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         SubjectFullFormListView = (ListView) findViewById(R.id.plumbListView);
 

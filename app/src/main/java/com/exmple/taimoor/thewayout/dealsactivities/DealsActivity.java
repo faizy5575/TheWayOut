@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -29,13 +30,19 @@ public class DealsActivity extends AppCompatActivity {
 
     ListView DealsListView;
     ProgressBar progressBar;
-    String HttpURL = "http://192.168.51.139:8080/theWayOut/deals.php";
+    String HttpURL = "http://192.168.53.118:80/theWayOut/deals.php";
     Button mAddNewDeal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_deals);
+
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
         mAddNewDeal = (Button) findViewById(R.id.addNewDeal);
         mAddNewDeal.setOnClickListener(onAddDeal);
 

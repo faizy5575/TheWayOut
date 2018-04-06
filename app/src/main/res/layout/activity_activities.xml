@@ -1,40 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/activity_sports"
+    android:id="@+id/drawerlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/finalactivities"
     android:weightSum="10">
 
-
-    <TextView
-        android:textStyle="italic"
-        android:fontFamily="serif"
-        android:background="#E91E63"
-        android:layout_marginBottom="500dp"
-        android:text="ACTIVITIES"
-        android:textAlignment="center"
-        android:textSize="45dp"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/textView3"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:src="@drawable/dt1"
-        android:layout_marginTop="80dp"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:id="@+id/imageView" />
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#91D8F7"
+            android:elevation="4dp"/>
+
 
     <LinearLayout
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="80dp"
         android:useDefaultMargins="true"
         android:id="@+id/parent_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_alignParentBottom="true"
         android:layout_below="@+id/imageView">
@@ -47,6 +37,7 @@
             android:orientation="horizontal" >
 
             <Button
+                android:background="@android:color/transparent"
                 android:textStyle="italic"
                 android:fontFamily="serif"
                 style="?android:attr/buttonStyleSmall"
@@ -54,27 +45,27 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
-                android:text="Barbar Shop" />
+                android:id="@+id/button2" />
 
             <Button
+                android:background="@android:color/transparent"
                 android:textStyle="italic"
                 android:fontFamily="serif"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:text="Library" />
+                android:layout_gravity="center_vertical" />
 
             <Button
+                android:background="@android:color/transparent"
                 android:textStyle="italic"
                 android:fontFamily="serif"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:text="Children Play Area" />
+                android:layout_gravity="center_vertical" />
 
 
         </LinearLayout>
@@ -87,34 +78,34 @@
             android:orientation="horizontal" >
 
             <Button
+                android:background="@android:color/transparent"
                 android:textStyle="italic"
                 android:fontFamily="serif"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:text="Roll Skating Court" />
+                android:layout_gravity="center_vertical" />
 
             <Button
+                android:background="@android:color/transparent"
                 android:textStyle="italic"
                 android:fontFamily="serif"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:text="Spa/Sauna" />
+                android:layout_gravity="center_vertical" />
 
             <Button
+                android:background="@android:color/transparent"
                 android:textStyle="italic"
                 android:fontFamily="serif"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:text="Sports Gear Shop" />
+                android:layout_gravity="center_vertical"/>
 
 
         </LinearLayout>
@@ -127,24 +118,24 @@
             android:orientation="horizontal" >
 
             <Button
+                android:background="@android:color/transparent"
                 android:textStyle="italic"
                 android:fontFamily="serif"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:text="Health Club" />
+                android:layout_gravity="center_vertical"/>
 
             <Button
+                android:background="@android:color/transparent"
                 android:textStyle="italic"
                 android:fontFamily="serif"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:text="Splash Pads" />
+                android:layout_gravity="center_vertical" />
 
 
         </LinearLayout>
@@ -153,5 +144,18 @@
 
     </LinearLayout>
 
+    </RelativeLayout>
 
-</RelativeLayout>
+    <android.support.design.widget.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/navigation_menu"
+        android:layout_gravity="start"
+        android:background="#A8CF45"
+        app:headerLayout="@layout/navigation_header"
+        android:id="@+id/nav_view">
+
+    </android.support.design.widget.NavigationView>
+
+
+</android.support.v4.widget.DrawerLayout>

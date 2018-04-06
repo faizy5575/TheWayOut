@@ -9,6 +9,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
 import android.widget.ListView;
@@ -21,11 +23,11 @@ import android.widget.ImageView;
 import com.exmple.taimoor.thewayout.R;
 
 
-public class cleaner extends Activity {
+public class cleaner extends AppCompatActivity {
 
     ListView SubjectFullFormListView;
     ProgressBar progressBar;
-    String HttpURL = "http://192.168.51.139:8080/theWayOut/cleaner.php";
+    String HttpURL = "http://192.168.53.118:80/theWayOut/cleaner.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,10 @@ public class cleaner extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         setContentView(R.layout.activity_cleaner);
+
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         SubjectFullFormListView = (ListView) findViewById(R.id.cleanListView);
 

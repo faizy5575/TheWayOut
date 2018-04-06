@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_home"
+        android:icon="@mipmap/ic_home_black_24dp"
+        android:title="Home"/>
+
+    <item android:id="@+id/nav_profile"
+        android:icon="@mipmap/ic_person_black_24dp"
+    android:title="My Profile" />
+
+    <item android:id="@+id/nav_bookings"
+        android:icon="@mipmap/ic_book_black_24dp"
+        android:title="My Bookings"/>
+
+    <item android:id="@+id/nav_notifications"
+        android:icon="@mipmap/ic_notifications_black_24dp"
+        android:title="Notifications"/>
+
+    <item android:id="@+id/nav_logout"
+        android:icon="@mipmap/ic_keyboard_return_black_24dp"
+        android:title="Logout"/>
+
+</menu>

@@ -4,55 +4,58 @@
     android:id="@+id/activity_deals"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:padding="3dp"
+    android:background="#91D8F7"
     android:layout_weight="10"
     tools:context="com.exmple.taimoor.thewayout.dealsactivities.DealsActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
 
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#A8CF45"
+            android:elevation="4dp"
+            android:layout_alignParentTop="true">
+        </android.support.v7.widget.Toolbar>
+
         <ImageView
-            android:src="@drawable/deals"
-            android:layout_width="250dp"
-            android:layout_height="60dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/button" />
+            android:id="@+id/borderView"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#000"
+            android:layout_marginTop="1dp"/>
+
 
         <Button
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="120dp"
             android:text="Add New"
+            android:textSize="20dp"
+            android:textAlignment="textStart"
+            android:background="#A8CF45"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
+            android:layout_height="wrap_content"
             android:id="@+id/addNewDeal"
-            android:drawableLeft="@android:drawable/ic_menu_add" />
+            android:drawableLeft="@android:drawable/ic_menu_add"/>
+
     </LinearLayout>
 
     <RelativeLayout
 
-        android:layout_below="@+id/linearLayout"
+        android:layout_below="@+id/linearLayout1"
         android:layout_height="match_parent"
-        android:layout_width="wrap_content">
+        android:layout_width="match_parent">
 
-        <TextView
-            android:id="@+id/SubjectFullFormPageTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Details Of Active Deals"
-            android:textColor="#000"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:textAlignment="center"/>
+
 
         <ListView
             android:id="@+id/dealsListView1"
@@ -60,7 +63,7 @@
             android:layout_height="fill_parent"
             android:visibility="gone"
             android:layout_marginTop="10dp"
-            android:layout_below="@+id/borderView">
+            android:layout_below="@+id/linearLayout1">
         </ListView>
 
         <ProgressBar
@@ -70,16 +73,6 @@
             android:layout_centerInParent="true"
             android:visibility="visible"
             />
-
-        <ImageView
-            android:id="@+id/borderView"
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:background="#000"
-            android:layout_marginTop="11dp"
-            android:layout_below="@+id/SubjectFullFormPageTitle"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
 
     </RelativeLayout>
 
