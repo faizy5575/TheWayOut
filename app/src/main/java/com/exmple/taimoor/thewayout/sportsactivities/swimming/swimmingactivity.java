@@ -1,33 +1,49 @@
-package com.exmple.taimoor.thewayout.sportsactivities.swimming;
+package com.exmple.taimoor.thewayout.sportsactivities.Swimming;
 
 import android.app.DatePickerDialog;
-        import android.app.TimePickerDialog;
-        import android.os.Bundle;
-        import android.support.v7.app.AppCompatActivity;
-        import android.text.format.DateFormat;
-        import android.view.View;
-        import android.widget.Button;
-        import android.widget.DatePicker;
-        import android.widget.TextView;
-        import android.widget.TimePicker;
+import android.app.ProgressDialog;
+import android.app.TimePickerDialog;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.text.format.DateFormat;
+import android.view.View;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.TextView;
+import android.widget.TimePicker;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.exmple.taimoor.thewayout.R;
+import com.exmple.taimoor.thewayout.homeactivities.Constants;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
-        import java.util.Calendar;
-        import java.util.Date;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
-public class swimmingactivity extends AppCompatActivity {
+public class SwimmingActivity extends AppCompatActivity {
 
-    static int hour, min;
 
-    TextView txtdate, txttime;
-    Button btntimepicker, btndatepicker;
+    private int hour, min;
+
+    TextView txtdate, txtStarttime, txtEndtime;
+    Button btnStarttime, btnEndtime, btndatepicker, checkAvailability;
 
     java.sql.Time timeValue;
     SimpleDateFormat format;
     Calendar c;
     int year, month, day;
+
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,17 +59,29 @@ public class swimmingactivity extends AppCompatActivity {
         day = c.get(Calendar.DAY_OF_MONTH);
 
         txtdate = (TextView) findViewById(R.id.txtDate);
-        txttime = (TextView) findViewById(R.id.txtTime);
+        txtStarttime = (TextView) findViewById(R.id.txtStartTime);
+        txtEndtime = (TextView) findViewById(R.id.txtEndTime);
+
 
         btndatepicker = (Button) findViewById(R.id.btnDatePicker);
-        btntimepicker = (Button) findViewById(R.id.btnTimePicker);
+        btnStarttime = (Button) findViewById(R.id.btnStartTimePicker);
+        btnEndtime = (Button)findViewById(R.id.btnEndTimePicker);
+        checkAvailability = (Button)findViewById(R.id.btnCheck);
+
+        progressDialog = new ProgressDialog(this);
+
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         btndatepicker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Get Current Date
 
-                DatePickerDialog dd = new DatePickerDialog(swimmingactivity.this,
+                DatePickerDialog dd = new DatePickerDialog(SwimmingActivity.this,
                         new DatePickerDialog.OnDateSetListener() {
 
                             @Override
@@ -61,9 +89,11 @@ public class swimmingactivity extends AppCompatActivity {
                                                   int monthOfYear, int dayOfMonth) {
 
                                 try {
-                                    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-                                    String dateInString = dayOfMonth + "/" + (monthOfYear + 1) + "/" + year;
+                                    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
+                                    String dateInString = year + "-" + (monthOfYear + 1) + "-" + dayOfMonth;
                                     Date date = formatter.parse(dateInString);
+
+                                    Date d = new Date();
 
                                     txtdate.setText(formatter.format(date).toString());
 
@@ -89,35 +119,171 @@ public class swimmingactivity extends AppCompatActivity {
                 dd.show();
             }
         });
-        btntimepicker.setOnClickListener(new View.OnClickListener() {
+        btnStarttime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
 
-                TimePickerDialog td = new TimePickerDialog(swimmingactivity.this,
+                TimePickerDialog td = new TimePickerDialog(SwimmingActivity.this,
                         new TimePickerDialog.OnTimeSetListener() {
                             @Override
                             public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                                 try {
-                                    String dtStart = String.valueOf(hourOfDay) + ":" + String.valueOf(minute);
-                                    format = new SimpleDateFormat("HH:mm");
+                                    String dtStart = String.valueOf(hourOfDay-24) + ":" + String.valueOf(minute);
+                                    format = new SimpleDateFormat("hh:mm");
 
                                     timeValue = new java.sql.Time(format.parse(dtStart).getTime());
-                                    txttime.setText(String.valueOf(timeValue));
-                                    String amPm = hourOfDay % 12 + ":" + minute + " " + ((hourOfDay >= 12) ? "PM" : "AM");
-                                    //     txttime.setText(amPm + "\n" + String.valueOf(timeValue));
+                                    txtStarttime.setText(String.valueOf(timeValue));
+//                                    String amPm = hourOfDay % 12 + ":" + minute + " " + ((hourOfDay >= 12) ? "PM" : "AM");
+//                                         txtStarttime.setText(amPm + "\n" + String.valueOf(timeValue));
                                 } catch (Exception ex) {
-                                    txttime.setText(ex.getMessage().toString());
+                                    txtStarttime.setText(ex.getMessage().toString());
                                 }
                             }
                         },
                         hour, min,
-                        DateFormat.is24HourFormat(swimmingactivity.this)
+                        DateFormat.is24HourFormat(SwimmingActivity.this)
+                );
+                td.show();
+
+
+
+
+
+//                final Calendar c = Calendar.getInstance();
+//                hour = c.get(Calendar.HOUR_OF_DAY);
+//                min = c.get(Calendar.MINUTE);
+//
+//                // Launch Time Picker Dialog
+//                TimePickerDialog timePickerDialog = new TimePickerDialog(this,
+//                        new TimePickerDialog.OnTimeSetListener() {
+//
+//                            @Override
+//                            public void onTimeSet(TimePicker view, int hourOfDay,
+//                                                  int minute) {
+//
+//                                txtStarttime.setText(hourOfDay + ":" + minute);
+//                            }
+//                        }, hour, min, false);
+//                timePickerDialog.show();
+
+
+            }
+        });
+
+        btnEndtime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                TimePickerDialog td = new TimePickerDialog(SwimmingActivity.this,
+                        new TimePickerDialog.OnTimeSetListener() {
+                            @Override
+                            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                                try {
+                                    String dtStart = String.valueOf(hourOfDay-24) + ":" + String.valueOf(minute)+ ":00" ;
+                                    format = new SimpleDateFormat("hh:mm:ss");
+
+                                    timeValue = new java.sql.Time(format.parse(dtStart).getTime());
+                                    txtEndtime.setText(String.valueOf(timeValue));
+//                                    String amPm = hourOfDay % 12 + ":" + minute + " " + ((hourOfDay >= 12) ? "PM" : "AM");
+//                                         txtEndtime.setText(amPm + "\n" + String.valueOf(timeValue));
+                                } catch (Exception ex) {
+                                    txtEndtime.setText(ex.getMessage().toString());
+                                }
+                            }
+                        },
+                        hour, min,
+                        DateFormat.is24HourFormat(SwimmingActivity.this)
                 );
                 td.show();
             }
         });
+
+        checkAvailability.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                dateTimeCheck();
+
+
+            }
+        });
+
     }
 
+    private void dateTimeCheck() {
 
+            final String date = txtdate.getText().toString().trim();
+            final String startTime = txtStarttime.getText().toString().trim();
+            final String endTime = txtEndtime.getText().toString().trim();
+
+
+
+            String mJSONURLString = Constants.URL_CHECKSWIMMING+"?item_type=checkAvailability&dte_date="+date+"&b_start_time="+startTime+"&b_end_time="+endTime;
+
+
+         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET,
+                mJSONURLString,
+                null,
+                new Response.Listener<JSONArray>() {
+                    @Override
+                    public void onResponse(JSONArray response) {
+
+                        progressDialog.setMessage("Checking Availability");
+                        progressDialog.show();
+
+
+                        ActiveSwimmingPools.dataList  = new ArrayList<>();
+
+                        for (int i = 0; i < response.length(); i++) {
+                            JSONObject jsonobject = null;
+                            try {
+                                jsonobject = response.getJSONObject(i);
+                                String name = jsonobject.getString("sp_name");
+                                String location = jsonobject.getString("sp_location");
+                                PlaceModel placeModel = new PlaceModel();
+                                placeModel.setName(name);
+                                placeModel.setLocation(location);
+
+                                ActiveSwimmingPools.dataList.add(placeModel);
+
+
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+                        }
+                        
+                        progressDialog.dismiss();
+                        Intent intent = new Intent(SwimmingActivity.this, ActiveSwimmingPools.class);
+                        startActivity(intent);
+
+
+                       JSONArray response_data = response;
+
+                        try {
+                            System.out.print(response_data.get(0).toString());
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        // Do something when error occurred
+                        System.out.print(error.toString());
+
+                    }
+                }
+        );
+
+
+        RequestHandler.getInstance(this).addToRequestQueue(jsonArrayRequest);
+
+
+
+    }
 }
